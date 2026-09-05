@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#315c8c" />
+    <title>Studyhausen</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">A calm place to learn</p>
+          <h1>Studyhausen</h1>
+        </div>
+        <button class="icon-button" id="resetProgress" title="Reset progress" aria-label="Reset progress">↺</button>
+      </header>
+
+      <section class="welcome-card">
+        <div>
+          <p class="eyebrow">Today’s small step</p>
+          <h2>Let’s learn a little about cells.</h2>
+          <p class="muted">You only need to do one small activity. You can stop whenever you need to.</p>
+          <button class="primary-button" data-action="start-topic">Start gently <span>→</span></button>
+        </div>
+        <div class="planet" aria-hidden="true">🪐</div>
+      </section>
+
+      <section class="progress-panel" aria-label="Your progress">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your journey</p>
+            <h2>Science</h2>
+          </div>
+          <span class="progress-label" id="progressLabel">0% complete</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <p class="muted small">Progress is about showing up, not getting everything right.</p>
+      </section>
+
+      <section>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Choose a topic</p>
+            <h2>Science topics</h2>
+          </div>
+        </div>
+        <div class="topic-grid" id="topicGrid"></div>
+      </section>
+
+      <section class="encouragement">
+        <span class="sparkle">✦</span>
+        <div>
+          <strong>You are allowed to take breaks.</strong>
+          <p class="muted small">Learning works best when your brain feels safe and ready.</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal hidden" id="studyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-card">
+        <button class="close-button" id="closeModal" aria-label="Close">×</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
